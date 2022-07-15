@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <label for="name">Name</label>
-    <input type="text" name="student-name" id="name" placeholder="Please enter your name">
+    <input
+      type="text"
+      name="student-name"
+      id="name"
+      placeholder="Please enter your name"
+    />
     <label for="profession">Profession</label>
-    <input type="text" name="student's-profession" id="profession" placeholder="Please enter your profession">
+    <input
+      type="text"
+      name="student's-profession"
+      id="profession"
+      placeholder="Please enter your profession"
+    />
     <label for="grade">Grade</label>
-    <input type="number" name="grade" id="grade" placeholder="Please enter your grade">
+    <input
+      type="number"
+      name="grade"
+      id="grade"
+      placeholder="Please enter your grade"
+    />
     <label for="car">Car</label>
-    <input type="text" name="student's-car" id="cartype" placeholder="Please enter your car manufacturer">
-    <input type="number" name="car-year" id="caryear" placeholder="Please enter your car's year of manufacture">
-    <input type="text" name="car-color" id="carcolor" placeholder="Please enter your car's color">
+    <input
+      type="text"
+      name="student's-car"
+      id="cartype"
+      placeholder="Please enter your car manufacturer"
+    />
+    <input
+      type="number"
+      name="car-year"
+      id="caryear"
+      placeholder="Please enter your car's year of manufacture"
+    />
+    <input
+      type="text"
+      name="car-color"
+      id="carcolor"
+      placeholder="Please enter your car's color"
+    />
     <button id="addstu" onclick="addStudent()">Add student</button>
     <button id="dispstu" onClick="display()">Display student list</button>
-    
+
     <h1>Student List</h1>
     <div class="student-list"></div>
-
-
-</body>
+    <script src="./app.js/index.js"></script>
+  </body>
 </html>
