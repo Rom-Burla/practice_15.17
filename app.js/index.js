@@ -15,28 +15,33 @@ function addStudent() {
     if (sChars.indexOf(name.value.charAt(i)) != -1) {
       alert("Your username has special characters. These are not allowed.");
       name.value = "";
+      name.style.borderColor = "red";
       return false;
     }
     if (Number(name.value)) {
       alert("Numbers are not a name!!!");
       name.value = "";
+      name.style.borderColor = "red";
       return false;
     }
   }
   if (grade.value > 100) {
     alert("grade can only be between 0 to 100");
     grade.value = "";
+    grade.style.borderColor = "red";
     throw "grade can only be between 0 to 100";
   }
   for (let i = 0; i < carColor.value.length; i++) {
     if (sChars.indexOf(carColor.value.charAt(i)) != -1) {
       alert("Your car color has special characters. These are not allowed.");
       carColor.value = "";
+      carColor.style.borderColor = "red";
       return false;
     }
     if (Number(carColor.value)) {
       alert("Numbers are not a color!!!");
       carColor.value = "";
+      carColor.style.borderColor = "red";
       return false;
     }
   }
@@ -44,11 +49,13 @@ function addStudent() {
     if (sChars.indexOf(profession.value.charAt(i)) != -1) {
       alert("Your profession has special characters. These are not allowed.");
       profession.value = "";
+      profession.style.borderColor = "red";
       return false;
     }
     if (Number(profession.value)) {
       alert("Numbers can't do your job!!!");
       profession.value = "";
+      profession.style.borderColor = "red";
       return false;
     }
   }
@@ -58,38 +65,67 @@ function addStudent() {
         "Your car manufacturer has special characters. These are not allowed."
       );
       carType.value = "";
+      carType.style.borderColor = "red";
       return false;
     }
     if (Number(carType.value)) {
       alert("Numbers don't manufacture cars!!!");
       carType.value = "";
+      carType.style.borderColor = "red";
       return false;
     }
   }
 
   if (name.value == "") {
     alert("Please enter your name");
+    name.style.borderColor = "red";
     return false;
-  } else if (profession.value == "") {
+  } else {
+    name.style.borderColor = "";
+  }
+  if (profession.value == "") {
     alert("Please enter your profession");
+    profession.style.borderColor = "red";
     return false;
-  } else if (grade.value == "") {
+  } else {
+    profession.style.borderColor = "";
+  }
+  if (grade.value == "") {
     alert("grade can only be between 0 to 100");
+    grade.style.borderColor = "red";
     return false;
-  } else if (carType.value == "") {
+  } else {
+    grade.style.borderColor = "";
+  }
+  if (carType.value == "") {
     alert("Please enter your car manufacturer");
+    carType.style.borderColor = "red";
     return false;
-  } else if (carYear.value > 2022) {
+  } else {
+    carType.style.borderColor = "";
+  }
+  if (carYear.value > 2022) {
     alert("Year of manufacture can only be between 1970 to 2022");
     carYear.value = "";
+    carYear.style.borderColor = "red";
     throw "";
-  } else if (carYear.value < 1970) {
+  } else {
+    carYear.style.borderColor = "";
+  }
+  if (carYear.value < 1970) {
     alert("Year of manufacture can only be between 1970 to 2022");
     carYear.value = "";
+    carYear.style.borderColor = "red";
     throw "";
-  } else if (carColor.value == "") {
+  } else {
+    carYear.style.borderColor = "";
+  }
+  if (carColor.value == "") {
     alert("Please enter your car's color");
+    carColor.style.borderColor = "red";
     return false;
+  } else {
+    carColor.style.borderColor = "";
   }
 
   let studentInfo = {
