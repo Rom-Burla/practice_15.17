@@ -1,8 +1,6 @@
 let students = [];
 
 function addStudent() {
-  debugger;
-
   let name = document.getElementById("name");
   let profession = document.getElementById("profession");
   let grade = document.getElementById("grade");
@@ -25,7 +23,27 @@ function addStudent() {
       return false;
     }
   }
+  for (let i = 0; i < profession.value.length; i++) {
+    if (sChars.indexOf(profession.value.charAt(i)) != -1) {
+      alert("Your profession has special characters. These are not allowed.");
+      profession.value = "";
+      profession.style.borderColor = "red";
+      return false;
+    }
+    if (Number(profession.value)) {
+      alert("Numbers can't do your job!!!");
+      profession.value = "";
+      profession.style.borderColor = "red";
+      return false;
+    }
+  }
   if (grade.value > 100) {
+    alert("grade can only be between 0 to 100");
+    grade.value = "";
+    grade.style.borderColor = "red";
+    throw "grade can only be between 0 to 100";
+  }
+  if (grade.value < 0) {
     alert("grade can only be between 0 to 100");
     grade.value = "";
     grade.style.borderColor = "red";
@@ -45,20 +63,7 @@ function addStudent() {
       return false;
     }
   }
-  for (let i = 0; i < profession.value.length; i++) {
-    if (sChars.indexOf(profession.value.charAt(i)) != -1) {
-      alert("Your profession has special characters. These are not allowed.");
-      profession.value = "";
-      profession.style.borderColor = "red";
-      return false;
-    }
-    if (Number(profession.value)) {
-      alert("Numbers can't do your job!!!");
-      profession.value = "";
-      profession.style.borderColor = "red";
-      return false;
-    }
-  }
+
   for (let i = 0; i < carType.value.length; i++) {
     if (sChars.indexOf(carType.value.charAt(i)) != -1) {
       alert(
